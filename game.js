@@ -161,6 +161,8 @@
     ui.next.hidden = !(won && levelNum && levelNum < LEVEL_COUNT);
     ui.prev.disabled = !levelNum || levelNum <= 1;
     ui.fwd.disabled = !levelNum || levelNum >= maxUnlocked;
+    ui.prev.style.visibility = levelNum === 1 ? "hidden" : "";
+    ui.fwd.style.visibility = levelNum === LEVEL_COUNT ? "hidden" : "";
   }
 
   
