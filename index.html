@@ -11,6 +11,7 @@
     <header class="top">
       <div class="tools">
         <button class="icon-btn" id="help" type="button" aria-label="Como jogar" title="Como jogar">?</button>
+        <button class="icon-btn" id="restart" type="button" aria-label="Zerar progresso e voltar ao nível 1" title="Zerar progresso (volta ao nível 1)">⏮</button>
       </div>
       <div class="counter">
         <small>Jogadas</small>
@@ -31,7 +32,11 @@
         </button>
       </div>
     </header>
-    <h1 class="title" id="level-name">Carregando…</h1>
+    <nav class="title-row" aria-label="Níveis">
+      <button class="nav-btn" id="prev" type="button" aria-label="Nível anterior" title="Nível anterior" disabled>‹</button>
+      <h1 class="title" id="level-name">Carregando…</h1>
+      <button class="nav-btn" id="fwd" type="button" aria-label="Próximo nível já liberado" title="Próximo nível já liberado" disabled>›</button>
+    </nav>
 
     <section class="board" id="board" aria-label="Tubos"></section>
 
@@ -61,7 +66,7 @@
       </div>
       <div class="tip">
         <span class="tip-icon" style="--tip: #00c24a" aria-hidden="true">↶</span>
-        <div><h3>Errou?</h3><p>↶ desfaz a última jogada e ↻ recomeça o nível.</p></div>
+        <div><h3>Errou?</h3><p>↶ desfaz a última jogada e ↻ recomeça o nível. ‹ › trocam entre os níveis já liberados e ⏮ zera o progresso.</p></div>
       </div>
     </div>
   </dialog>

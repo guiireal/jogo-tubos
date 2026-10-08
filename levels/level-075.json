@@ -1,0 +1,41 @@
+{
+  "$schema": "../level.schema.json",
+  "id": "level-075",
+  "name": "Nível 75",
+  "colors": {
+    "orange": { "color": "#f97316", "pattern": "vstripes", "label": "laranja" },
+    "green": { "color": "#22c55e", "pattern": "dots", "label": "verde" },
+    "violet": { "color": "#a855f7", "pattern": "checker", "label": "roxo" },
+    "teal": { "color": "#0f766e", "pattern": "checker", "label": "verde-petróleo" },
+    "yellow": { "color": "#facc15", "pattern": "diagonal", "label": "amarelo" },
+    "magenta": { "color": "#ea3fe0", "pattern": "diagonal", "label": "magenta" },
+    "brown": { "color": "#a2692f", "pattern": "wood", "label": "marrom" },
+    "cyan": { "color": "#67e8f9", "pattern": "grid", "label": "ciano" },
+    "lime": { "color": "#a3e635", "pattern": "vstripes", "label": "verde-limão" },
+    "red": { "color": "#ef4444", "pattern": "solid", "label": "vermelho" },
+    "blue": { "color": "#3b82f6", "pattern": "stripes", "label": "azul" }
+  },
+  "tubes": [
+    { "capacity": 5, "contents": ["magenta", "lime", "teal", "red", "blue"] },
+    { "capacity": 5, "contents": ["green", "lime", "violet", "orange", "blue"] },
+    { "capacity": 5, "contents": ["violet", "red", "orange", "yellow", "green"] },
+    { "capacity": 5, "contents": ["teal", "lime", "yellow", "blue", "teal"] },
+    { "capacity": 5, "contents": ["magenta", "orange", "lime", "magenta", "cyan"] },
+    { "capacity": 5, "contents": ["orange", "green", "violet", "cyan", "yellow"] },
+    { "capacity": 5, "contents": ["brown", "orange", "red", "yellow", "cyan"] },
+    { "capacity": 5, "contents": ["red", "violet", "lime", "teal", "green"] },
+    { "capacity": 5, "contents": ["brown", "teal", "red", "magenta", "magenta"] },
+    { "capacity": 5, "contents": ["blue", "brown", "brown", "brown", "cyan"] },
+    { "capacity": 5, "contents": ["blue", "violet", "yellow", "cyan", "green"] },
+    { "capacity": 5, "contents": [] },
+    { "capacity": 5, "contents": [] }
+  ],
+  "layout": {
+    "groups": [
+      [
+        [0, 1, 2, 3, 4, 5, 6],
+        [7, 8, 9, 10, 11, 12]
+      ]
+    ]
+  }
+}

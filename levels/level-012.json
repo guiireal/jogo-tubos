@@ -1,7 +1,7 @@
 {
   "$schema": "../level.schema.json",
   "id": "level-012",
-  "name": "Nível 12 · Clássico",
+  "name": "Nível 12",
   "colors": {
     "red": { "color": "#ef4444", "pattern": "solid" },
     "blue": { "color": "#3b82f6", "pattern": "stripes" },

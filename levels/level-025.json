@@ -1,7 +1,7 @@
 {
   "$schema": "../level.schema.json",
   "id": "level-025",
-  "name": "Nível 25 · Torres",
+  "name": "Nível 25",
   "colors": {
     "coral": { "color": "#ff7a6b", "pattern": "diagonal" },
     "mint": { "color": "#5eead4", "pattern": "grid" },

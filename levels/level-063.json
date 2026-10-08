@@ -1,0 +1,41 @@
+{
+  "$schema": "../level.schema.json",
+  "id": "level-063",
+  "name": "Nível 63",
+  "colors": {
+    "blue": { "color": "#3b82f6", "pattern": "stripes", "label": "azul" },
+    "orange": { "color": "#f97316", "pattern": "vstripes", "label": "laranja" },
+    "red": { "color": "#ef4444", "pattern": "solid", "label": "vermelho" },
+    "yellow": { "color": "#facc15", "pattern": "diagonal", "label": "amarelo" },
+    "violet": { "color": "#a855f7", "pattern": "checker", "label": "roxo" },
+    "cyan": { "color": "#67e8f9", "pattern": "grid", "label": "ciano" },
+    "lime": { "color": "#a3e635", "pattern": "vstripes", "label": "verde-limão" },
+    "magenta": { "color": "#ea3fe0", "pattern": "diagonal", "label": "magenta" },
+    "teal": { "color": "#0f766e", "pattern": "checker", "label": "verde-petróleo" },
+    "brown": { "color": "#a2692f", "pattern": "wood", "label": "marrom" },
+    "pink": { "color": "#f9a8d4", "pattern": "dots", "label": "rosa" }
+  },
+  "tubes": [
+    { "capacity": 5, "contents": ["cyan", "cyan", "teal", "violet", "brown"] },
+    { "capacity": 5, "contents": ["orange", "cyan", "pink", "orange", "blue"] },
+    { "capacity": 5, "contents": ["pink", "brown", "orange", "brown", "red"] },
+    { "capacity": 5, "contents": ["red", "orange", "teal", "teal", "violet"] },
+    { "capacity": 5, "contents": ["cyan", "blue", "lime", "blue", "magenta"] },
+    { "capacity": 5, "contents": ["lime", "pink", "yellow", "teal", "yellow"] },
+    { "capacity": 5, "contents": ["red", "orange", "blue", "pink", "cyan"] },
+    { "capacity": 5, "contents": ["magenta", "magenta", "violet", "lime", "yellow"] },
+    { "capacity": 5, "contents": ["violet", "red", "yellow", "yellow", "lime"] },
+    { "capacity": 5, "contents": ["violet", "red", "blue", "magenta", "brown"] },
+    { "capacity": 5, "contents": ["brown", "lime", "pink", "magenta", "teal"] },
+    { "capacity": 5, "contents": [] },
+    { "capacity": 5, "contents": [] }
+  ],
+  "layout": {
+    "groups": [
+      [
+        [0, 1, 2, 3, 4, 5, 6],
+        [7, 8, 9, 10, 11, 12]
+      ]
+    ]
+  }
+}

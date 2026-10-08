@@ -3,7 +3,7 @@
   "use strict";
 
   const R = window.TubeRules;
-  const LEVEL_COUNT = 50;
+  const LEVEL_COUNT = 100;
   const levelPath = (n) => `levels/level-${String(n).padStart(3, "0")}.json`;
 
   const $ = (id) => document.getElementById(id);
@@ -17,6 +17,9 @@
     retry: $("retry"),
     help: $("help"),
     next: $("next"),
+    prev: $("prev"),
+    fwd: $("fwd"),
+    restart: $("restart"),
     tutorial: $("tutorial"),
   };
 
@@ -156,6 +159,8 @@
         ? "Todos os níveis completos!"
         : "Completo!";
     ui.next.hidden = !(won && levelNum && levelNum < LEVEL_COUNT);
+    ui.prev.disabled = !levelNum || levelNum <= 1;
+    ui.fwd.disabled = !levelNum || levelNum >= maxUnlocked;
   }
 
   
@@ -603,6 +608,14 @@
   ui.undo.addEventListener("click", undo);
   ui.retry.addEventListener("click", () => level && reset());
   ui.next.addEventListener("click", () => load(levelNum + 1));
+  ui.prev.addEventListener("click", () => load(levelNum - 1));
+  ui.fwd.addEventListener("click", () => load(levelNum + 1));
+  ui.restart.addEventListener("click", () => {
+    if (!confirm("Zerar o progresso e voltar ao nível 1?")) return;
+    maxUnlocked = 1;
+    writeStore("tubos.liberado", 1);
+    load(1);
+  });
   ui.help.addEventListener("click", () => ui.tutorial.showModal());
   ui.tutorial.addEventListener(
     "click",
@@ -610,7 +623,7 @@
   ); 
   document.addEventListener(
     "click",
-    (e) => e.target.closest(".icon-btn, .next") && sfx.click(),
+    (e) => e.target.closest(".icon-btn, .next, .nav-btn") && sfx.click(),
   );
   addEventListener("pointerdown", loadGlub, { once: true }); 
 

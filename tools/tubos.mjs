@@ -7,13 +7,13 @@ const require = createRequire(import.meta.url);
 const R = require('../rules.js');
 
 const [cmd, file, ...rest] = process.argv.slice(2);
-const opt = parseOpts(rest);
+const opt = parseOpts(cmd === 'campaign' ? [file, ...rest] : rest);
 
 
-const LEVELS = 50;
+const LEVELS = 100;
 
 
-const BANDS = [[2, 2], [5, 3], [9, 4], [14, 5], [20, 6], [27, 7], [35, 8], [43, 9], [50, 10]];
+const BANDS = [[2, 2], [5, 3], [9, 4], [14, 5], [20, 6], [27, 7], [35, 8], [43, 9], [50, 10], [62, 10], [75, 11], [88, 12], [100, 12]];
 
 
 
@@ -32,6 +32,8 @@ const PALETTE = {
   pink:   { color: '#f9a8d4', pattern: 'dots',     label: 'rosa' },
   brown:  { color: '#a2692f', pattern: 'wood',     label: 'marrom' },
   teal:   { color: '#0f766e', pattern: 'checker',  label: 'verde-petróleo' },
+  lime:   { color: '#a3e635', pattern: 'vstripes', label: 'verde-limão' },
+  magenta:{ color: '#ea3fe0', pattern: 'diagonal', label: 'magenta' },
 };
 
 if (cmd === 'campaign') { campaign(); process.exit(0); }
@@ -86,7 +88,7 @@ if (cmd === 'shuffle') {
 
 
 function campaign() {
-  for (let n = 1; n <= LEVELS; n++) {
+  for (let n = Number(opt.from ?? 1); n <= LEVELS; n++) {
     const rand = mulberry32(Number(opt.seed ?? 0) + n * 7919);
     const bandIdx = BANDS.findIndex(([last]) => n <= last);
     const first = bandIdx ? BANDS[bandIdx - 1][0] + 1 : 1;
@@ -99,17 +101,17 @@ function campaign() {
       template = R.normalizeLevel(raw).tubes;
       colors = raw.colors;
       layout = raw.layout?.groups;
-      name += ' · ' + raw.name.split('·').pop().trim();
     } else {
       const k = BANDS[bandIdx][1];
       const ids = shuffle(Object.keys(PALETTE), rand).slice(0, k);
       colors = Object.fromEntries(ids.map(id => [id, PALETTE[id]]));
       if (MIXED(n)) {
         
-        const sizes = n < 20 ? [3, 4, 4, 5] : n < 35 ? [3, 4, 5, 6] : [3, 4, 5, 6, 7];
+        const sizes = n < 20 ? [3, 4, 4, 5] : n < 35 ? [3, 4, 5, 6] : n <= 50 ? [3, 4, 5, 6, 7] : [4, 5, 6, 7];
         const pickSize = () => sizes[Math.floor(rand() * sizes.length)];
         const goals = ids.map(id => ({ id, cap: pickSize() }));
-        const extras = [3 + Math.floor(rand() * 3), 3 + Math.floor(rand() * 3)];   
+        const lo = n > 50 ? 4 : 3;
+        const extras = [lo + Math.floor(rand() * 3), lo + Math.floor(rand() * 3)];   
         const caps = shuffle([...goals.map(g => g.cap), ...extras], rand)
           .sort((a, b) => (b >= 6) - (a >= 6));                                    
         const units = goals.flatMap(g => Array(g.cap).fill(g.id));
@@ -117,7 +119,7 @@ function campaign() {
         const tall = caps.filter(c => c >= 6).length;
         layout = tall ? [rowsOf(range(0, tall)), rowsOf(range(tall, caps.length))] : [rowsOf(range(0, caps.length))];
       } else {
-        const cap = n >= 15 && n % 5 === 0 ? 5 : 4;
+        const cap = n > 75 || (n > 50 && n % 2) || (n >= 15 && n % 5 === 0) ? 5 : 4;
         template = [
           ...ids.map(id => ({ capacity: cap, contents: Array(cap).fill(id) })),
           ...Array.from({ length: k === 2 ? 1 : 2 }, () => ({ capacity: cap, contents: [] })),
@@ -126,9 +128,10 @@ function campaign() {
     }
 
     make ??= () => shuffleKeepingCounts(template, rand);
-    const cands = MIXED(n) ? candidates(make, rand, 10, 3) : candidates(make, rand, 24);
+    const lim = n > 50 ? 200000 : 60000;
+    const cands = MIXED(n) ? candidates(make, rand, 10, 3, lim) : candidates(make, rand, 24, 6, lim);
     if (!cands.length) { console.error(`✗ Nível ${n}: nenhum embaralhamento solucionável.`); process.exit(2); }
-    const p = MIXED(n) ? 0.1 + 0.5 * pos : 0.1 + 0.8 * pos;   
+    const p = n > 50 ? 0.5 + 0.5 * pos : MIXED(n) ? 0.1 + 0.5 * pos : 0.1 + 0.8 * pos;   
     const pick = cands[Math.round(p * (cands.length - 1))];
 
     const total = pick.tubes.length;
@@ -149,13 +152,13 @@ function campaign() {
 }
 
 
-function candidates(make, rand, count, attempts = 6) {
+function candidates(make, rand, count, attempts = 6, limit = 60000) {
   const out = [];
   for (let tries = 0; out.length < count && tries < count * 20; tries++) {
     const tubes = make();
     const totals = R.countColors(tubes);
     if (tubes.some((_, i) => R.isTubeComplete(tubes, i, totals))) continue;
-    const sol = bestOf(tubes, attempts, rand, 60000);   
+    const sol = bestOf(tubes, attempts, rand, limit);   
     if (sol?.length) out.push({ tubes, moves: sol.length });
   }
   return out.sort((a, b) => a.moves - b.moves);

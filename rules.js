@@ -117,7 +117,7 @@
     for (const t of tubes) {
       if (!t.contents.length) continue;
       const color = t.contents[0];
-      if (t.contents.some(c => c !== color)) return false;
+      if (t.contents.length !== t.capacity || t.contents.some(c => c !== color)) return false;
       if (where[color]) return false;
       where[color] = true;
     }
@@ -128,7 +128,7 @@
     const t = tubes[i];
     if (!t.contents.length) return false;
     const color = t.contents[0];
-    return t.contents.every(c => c === color) && t.contents.length === totals[color];
+    return t.contents.every(c => c === color) && t.contents.length === totals[color] && t.contents.length === t.capacity;
   }
 
   function solve(start, { rand = Math.random, limit = 400000 } = {}) {
@@ -144,7 +144,7 @@
         const wholeTube = run.n === st[a].contents.length;
         for (let b = 0; b < st.length; b++) {
           if (!pourAmount(st, a, b)) continue;
-          if (wholeTube && !st[b].contents.length) continue;
+          if (wholeTube && !st[b].contents.length && caps[a] === caps[b]) continue;
           list.push({ a, b, w: (st[b].contents.length ? 0 : 1) + rand() * 0.9 });
         }
       }

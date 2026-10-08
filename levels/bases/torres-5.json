@@ -1,7 +1,7 @@
 {
   "$schema": "../../level.schema.json",
   "id": "level-003",
-  "name": "Nível 3 · Torres",
+  "name": "Nível 3",
   "defaultCapacity": 5,
   "colors": {
     "coral": { "color": "#ff7a6b", "pattern": "diagonal" },

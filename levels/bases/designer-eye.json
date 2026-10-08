@@ -1,7 +1,7 @@
 {
   "$schema": "../../level.schema.json",
   "id": "level-001",
-  "name": "Nível 1 · Designer Eye",
+  "name": "Nível 1",
   "colors": {
     "brown":   { "color": "#a2692f", "pattern": "wood" },
     "pink":    { "color": "#f7bcd2", "pattern": "dots" },

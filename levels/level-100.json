@@ -1,0 +1,46 @@
+{
+  "$schema": "../level.schema.json",
+  "id": "level-100",
+  "name": "Nível 100",
+  "colors": {
+    "orange": { "color": "#f97316", "pattern": "vstripes", "label": "laranja" },
+    "red": { "color": "#ef4444", "pattern": "solid", "label": "vermelho" },
+    "brown": { "color": "#a2692f", "pattern": "wood", "label": "marrom" },
+    "violet": { "color": "#a855f7", "pattern": "checker", "label": "roxo" },
+    "green": { "color": "#22c55e", "pattern": "dots", "label": "verde" },
+    "magenta": { "color": "#ea3fe0", "pattern": "diagonal", "label": "magenta" },
+    "yellow": { "color": "#facc15", "pattern": "diagonal", "label": "amarelo" },
+    "cyan": { "color": "#67e8f9", "pattern": "grid", "label": "ciano" },
+    "teal": { "color": "#0f766e", "pattern": "checker", "label": "verde-petróleo" },
+    "blue": { "color": "#3b82f6", "pattern": "stripes", "label": "azul" },
+    "pink": { "color": "#f9a8d4", "pattern": "dots", "label": "rosa" },
+    "lime": { "color": "#a3e635", "pattern": "vstripes", "label": "verde-limão" }
+  },
+  "tubes": [
+    { "capacity": 6, "contents": ["magenta", "green", "magenta", "lime", "orange", "green"] },
+    { "capacity": 7, "contents": ["red", "cyan", "lime", "lime", "pink", "yellow"] },
+    { "capacity": 7, "contents": ["violet", "cyan", "green", "blue", "orange", "cyan", "red"] },
+    { "capacity": 6, "contents": ["violet", "cyan", "teal", "teal"] },
+    { "capacity": 7, "contents": ["pink", "pink", "green", "blue", "teal", "violet"] },
+    { "capacity": 6, "contents": ["violet", "lime", "yellow", "brown", "magenta", "pink"] },
+    { "capacity": 6, "contents": ["red", "teal", "yellow", "teal", "orange", "violet"] },
+    { "capacity": 7, "contents": ["green", "red", "blue", "yellow", "pink", "brown"] },
+    { "capacity": 6, "contents": ["cyan", "blue", "brown", "orange", "lime", "pink"] },
+    { "capacity": 4, "contents": ["teal", "orange", "violet", "red"] },
+    { "capacity": 5, "contents": ["cyan", "orange", "blue", "lime", "lime"] },
+    { "capacity": 5, "contents": ["yellow", "green", "pink", "brown", "blue"] },
+    { "capacity": 5, "contents": ["teal", "magenta", "magenta", "green", "red"] },
+    { "capacity": 5, "contents": [] }
+  ],
+  "layout": {
+    "groups": [
+      [
+        [0, 1, 2, 3, 4],
+        [5, 6, 7, 8]
+      ],
+      [
+        [9, 10, 11, 12, 13]
+      ]
+    ]
+  }
+}

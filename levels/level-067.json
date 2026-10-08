@@ -1,0 +1,44 @@
+{
+  "$schema": "../level.schema.json",
+  "id": "level-067",
+  "name": "Nível 67",
+  "colors": {
+    "pink": { "color": "#f9a8d4", "pattern": "dots", "label": "rosa" },
+    "brown": { "color": "#a2692f", "pattern": "wood", "label": "marrom" },
+    "violet": { "color": "#a855f7", "pattern": "checker", "label": "roxo" },
+    "blue": { "color": "#3b82f6", "pattern": "stripes", "label": "azul" },
+    "green": { "color": "#22c55e", "pattern": "dots", "label": "verde" },
+    "orange": { "color": "#f97316", "pattern": "vstripes", "label": "laranja" },
+    "magenta": { "color": "#ea3fe0", "pattern": "diagonal", "label": "magenta" },
+    "teal": { "color": "#0f766e", "pattern": "checker", "label": "verde-petróleo" },
+    "red": { "color": "#ef4444", "pattern": "solid", "label": "vermelho" },
+    "lime": { "color": "#a3e635", "pattern": "vstripes", "label": "verde-limão" },
+    "yellow": { "color": "#facc15", "pattern": "diagonal", "label": "amarelo" }
+  },
+  "tubes": [
+    { "capacity": 6, "contents": ["orange", "red", "orange", "red", "teal", "red"] },
+    { "capacity": 6, "contents": ["lime", "lime", "pink", "orange", "orange", "blue"] },
+    { "capacity": 7, "contents": ["red", "pink", "green", "teal", "pink"] },
+    { "capacity": 7, "contents": ["violet", "yellow", "violet", "green", "orange", "lime", "violet"] },
+    { "capacity": 7, "contents": ["brown", "pink", "violet", "pink", "yellow", "violet", "teal"] },
+    { "capacity": 6, "contents": ["yellow", "orange", "magenta", "pink", "magenta", "brown"] },
+    { "capacity": 5, "contents": ["brown", "blue", "brown", "red", "green"] },
+    { "capacity": 5, "contents": ["blue", "teal", "green", "teal", "pink"] },
+    { "capacity": 4, "contents": ["lime", "teal", "violet", "yellow"] },
+    { "capacity": 4, "contents": ["teal", "green"] },
+    { "capacity": 4, "contents": ["lime", "magenta", "blue", "brown"] },
+    { "capacity": 4, "contents": ["orange", "brown", "lime", "magenta"] },
+    { "capacity": 5, "contents": [] }
+  ],
+  "layout": {
+    "groups": [
+      [
+        [0, 1, 2, 3, 4, 5]
+      ],
+      [
+        [6, 7, 8, 9],
+        [10, 11, 12]
+      ]
+    ]
+  }
+}

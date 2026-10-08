@@ -1,0 +1,42 @@
+{
+  "$schema": "../level.schema.json",
+  "id": "level-052",
+  "name": "Nível 52",
+  "colors": {
+    "magenta": { "color": "#ea3fe0", "pattern": "diagonal", "label": "magenta" },
+    "blue": { "color": "#3b82f6", "pattern": "stripes", "label": "azul" },
+    "green": { "color": "#22c55e", "pattern": "dots", "label": "verde" },
+    "yellow": { "color": "#facc15", "pattern": "diagonal", "label": "amarelo" },
+    "violet": { "color": "#a855f7", "pattern": "checker", "label": "roxo" },
+    "orange": { "color": "#f97316", "pattern": "vstripes", "label": "laranja" },
+    "cyan": { "color": "#67e8f9", "pattern": "grid", "label": "ciano" },
+    "teal": { "color": "#0f766e", "pattern": "checker", "label": "verde-petróleo" },
+    "red": { "color": "#ef4444", "pattern": "solid", "label": "vermelho" },
+    "pink": { "color": "#f9a8d4", "pattern": "dots", "label": "rosa" }
+  },
+  "tubes": [
+    { "capacity": 6, "contents": ["red", "blue", "violet", "teal", "teal"] },
+    { "capacity": 6, "contents": ["green", "red", "teal", "pink", "magenta", "yellow"] },
+    { "capacity": 6, "contents": ["yellow", "orange", "red", "cyan", "pink", "orange"] },
+    { "capacity": 6, "contents": ["yellow", "orange", "orange", "blue", "magenta", "pink"] },
+    { "capacity": 7, "contents": ["magenta", "blue", "green", "yellow", "pink"] },
+    { "capacity": 7, "contents": ["cyan", "orange", "violet", "magenta", "blue", "pink", "violet"] },
+    { "capacity": 6, "contents": ["blue", "cyan", "cyan"] },
+    { "capacity": 6, "contents": ["teal", "violet", "magenta", "yellow", "violet", "pink"] },
+    { "capacity": 5, "contents": ["blue", "blue", "cyan", "red", "violet"] },
+    { "capacity": 4, "contents": ["green", "orange", "cyan", "violet"] },
+    { "capacity": 4, "contents": ["green", "yellow", "teal", "magenta"] },
+    { "capacity": 4, "contents": [] }
+  ],
+  "layout": {
+    "groups": [
+      [
+        [0, 1, 2, 3],
+        [4, 5, 6, 7]
+      ],
+      [
+        [8, 9, 10, 11]
+      ]
+    ]
+  }
+}
