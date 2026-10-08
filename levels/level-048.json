@@ -1,0 +1,39 @@
+{
+  "$schema": "../level.schema.json",
+  "id": "level-048",
+  "name": "Nível 48",
+  "colors": {
+    "brown": { "color": "#a2692f", "pattern": "wood", "label": "marrom" },
+    "pink": { "color": "#f9a8d4", "pattern": "dots", "label": "rosa" },
+    "violet": { "color": "#a855f7", "pattern": "checker", "label": "roxo" },
+    "green": { "color": "#22c55e", "pattern": "dots", "label": "verde" },
+    "blue": { "color": "#3b82f6", "pattern": "stripes", "label": "azul" },
+    "red": { "color": "#ef4444", "pattern": "solid", "label": "vermelho" },
+    "yellow": { "color": "#facc15", "pattern": "diagonal", "label": "amarelo" },
+    "cyan": { "color": "#67e8f9", "pattern": "grid", "label": "ciano" },
+    "orange": { "color": "#f97316", "pattern": "vstripes", "label": "laranja" },
+    "teal": { "color": "#0f766e", "pattern": "checker", "label": "verde-petróleo" }
+  },
+  "tubes": [
+    { "capacity": 4, "contents": ["red", "brown", "brown", "green"] },
+    { "capacity": 4, "contents": ["yellow", "pink", "blue", "orange"] },
+    { "capacity": 4, "contents": ["pink", "green", "red", "red"] },
+    { "capacity": 4, "contents": ["teal", "green", "blue", "yellow"] },
+    { "capacity": 4, "contents": ["cyan", "yellow", "violet", "yellow"] },
+    { "capacity": 4, "contents": ["orange", "violet", "teal", "blue"] },
+    { "capacity": 4, "contents": ["pink", "cyan", "violet", "orange"] },
+    { "capacity": 4, "contents": ["green", "blue", "teal", "cyan"] },
+    { "capacity": 4, "contents": ["cyan", "brown", "violet", "pink"] },
+    { "capacity": 4, "contents": ["brown", "orange", "teal", "red"] },
+    { "capacity": 4, "contents": [] },
+    { "capacity": 4, "contents": [] }
+  ],
+  "layout": {
+    "groups": [
+      [
+        [0, 1, 2, 3, 4, 5],
+        [6, 7, 8, 9, 10, 11]
+      ]
+    ]
+  }
+}

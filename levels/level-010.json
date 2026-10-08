@@ -1,0 +1,29 @@
+{
+  "$schema": "../level.schema.json",
+  "id": "level-010",
+  "name": "Nível 10",
+  "colors": {
+    "green": { "color": "#22c55e", "pattern": "dots", "label": "verde" },
+    "blue": { "color": "#3b82f6", "pattern": "stripes", "label": "azul" },
+    "brown": { "color": "#a2692f", "pattern": "wood", "label": "marrom" },
+    "pink": { "color": "#f9a8d4", "pattern": "dots", "label": "rosa" },
+    "red": { "color": "#ef4444", "pattern": "solid", "label": "vermelho" }
+  },
+  "tubes": [
+    { "capacity": 3, "contents": ["brown", "blue", "blue"] },
+    { "capacity": 5, "contents": [] },
+    { "capacity": 3, "contents": ["brown", "brown", "blue"] },
+    { "capacity": 4, "contents": ["pink", "green", "brown"] },
+    { "capacity": 4, "contents": ["red", "green", "red"] },
+    { "capacity": 5, "contents": ["brown", "pink", "pink", "red"] },
+    { "capacity": 5, "contents": ["green", "green", "blue"] }
+  ],
+  "layout": {
+    "groups": [
+      [
+        [0, 1, 2, 3],
+        [4, 5, 6]
+      ]
+    ]
+  }
+}

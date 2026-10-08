@@ -1,0 +1,33 @@
+{
+  "$schema": "../level.schema.json",
+  "id": "level-025",
+  "name": "Nível 25 · Torres",
+  "colors": {
+    "coral": { "color": "#ff7a6b", "pattern": "diagonal" },
+    "mint": { "color": "#5eead4", "pattern": "grid" },
+    "sky": { "color": "#60a5fa", "pattern": "dots" },
+    "sand": { "color": "#e9c46a", "pattern": "wood" },
+    "plum": { "color": "#b04fc9", "pattern": "stripes" },
+    "lime": { "color": "#a3e635", "pattern": "vstripes" }
+  },
+  "tubes": [
+    { "capacity": 5, "contents": ["sand", "plum", "sand", "coral", "sky"] },
+    { "capacity": 5, "contents": ["mint", "lime", "coral", "lime", "sand"] },
+    { "capacity": 5, "contents": ["sky", "lime", "mint", "sand", "plum"] },
+    { "capacity": 5, "contents": ["plum", "mint", "coral", "coral", "coral"] },
+    { "capacity": 5, "contents": ["sky", "sand", "plum", "lime", "lime"] },
+    { "capacity": 5, "contents": ["mint", "plum", "sky", "sky", "mint"] },
+    { "capacity": 5, "contents": [] },
+    { "capacity": 5, "contents": [] }
+  ],
+  "layout": {
+    "groups": [
+      [
+        [0, 1, 2, 3]
+      ],
+      [
+        [4, 5, 6, 7]
+      ]
+    ]
+  }
+}

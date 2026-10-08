@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "level.schema.json",
+  "title": "Nível do jogo de tubos",
+  "description": "Define cores, tubos (capacidade e conteúdo inicial) e a disposição dos tubos na tela. O conteúdo de cada tubo é listado do FUNDO para o TOPO.",
+  "type": "object",
+  "required": ["colors", "tubes"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "id": {
+      "type": "string",
+      "description": "Identificador único do nível (ex.: \"level-001\")."
+    },
+    "name": {
+      "type": "string",
+      "description": "Nome exibido no topo do jogo."
+    },
+    "defaultCapacity": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 4,
+      "description": "Capacidade usada pelos tubos que não definem \"capacity\"."
+    },
+    "colors": {
+      "type": "object",
+      "description": "Mapa id → cor. Os ids são usados em tubes[].contents.",
+      "minProperties": 1,
+      "additionalProperties": {
+        "oneOf": [
+          { "type": "string", "description": "Atalho: só a cor CSS, padrão sólido." },
+          {
+            "type": "object",
+            "required": ["color"],
+            "additionalProperties": false,
+            "properties": {
+              "color": { "type": "string", "description": "Qualquer cor CSS (#hex, rgb(), hsl()...)." },
+              "pattern": {
+                "enum": ["solid", "stripes", "vstripes", "diagonal", "dots", "checker", "grid", "wood"],
+                "default": "solid",
+                "description": "Textura sobre a cor — ajuda a distinguir cores parecidas."
+              },
+              "label": { "type": "string", "description": "Nome lido por leitores de tela." }
+            }
+          }
+        ]
+      }
+    },
+    "tubes": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Tubos na ordem dos índices usados em layout.",
+      "items": {
+        "oneOf": [
+          {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Atalho: só o conteúdo (fundo → topo), com defaultCapacity."
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "capacity": { "type": "integer", "minimum": 1, "description": "Quantas unidades o tubo comporta." },
+              "contents": {
+                "type": "array",
+                "items": { "type": "string" },
+                "default": [],
+                "description": "Ids de cor do fundo para o topo. Vazio = tubo vazio."
+              }
+            }
+          }
+        ]
+      }
+    },
+    "layout": {
+      "type": "object",
+      "description": "Opcional. Sem ele, todos os tubos ficam numa única linha.",
+      "required": ["groups"],
+      "additionalProperties": false,
+      "properties": {
+        "groups": {
+          "type": "array",
+          "minItems": 1,
+          "description": "Grupos lado a lado, separados por uma divisória. Cada grupo é uma lista de linhas; cada linha é uma lista de índices de tubos. Todo tubo deve aparecer exatamente uma vez.",
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "array",
+              "minItems": 1,
+              "items": { "type": "integer", "minimum": 0 }
+            }
+          }
+        }
+      }
+    }
+  }
+}

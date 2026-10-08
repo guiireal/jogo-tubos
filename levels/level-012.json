@@ -1,0 +1,21 @@
+{
+  "$schema": "../level.schema.json",
+  "id": "level-012",
+  "name": "Nível 12 · Clássico",
+  "colors": {
+    "red": { "color": "#ef4444", "pattern": "solid" },
+    "blue": { "color": "#3b82f6", "pattern": "stripes" },
+    "green": { "color": "#22c55e", "pattern": "dots" },
+    "yellow": { "color": "#facc15", "pattern": "diagonal" },
+    "violet": { "color": "#a855f7", "pattern": "checker" }
+  },
+  "tubes": [
+    { "capacity": 4, "contents": ["blue", "violet", "violet", "green"] },
+    { "capacity": 4, "contents": ["yellow", "red", "red", "red"] },
+    { "capacity": 4, "contents": ["blue", "yellow", "yellow", "green"] },
+    { "capacity": 4, "contents": ["green", "blue", "violet", "green"] },
+    { "capacity": 4, "contents": ["yellow", "blue", "violet", "red"] },
+    { "capacity": 4, "contents": [] },
+    { "capacity": 4, "contents": [] }
+  ]
+}

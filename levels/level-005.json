@@ -1,0 +1,17 @@
+{
+  "$schema": "../level.schema.json",
+  "id": "level-005",
+  "name": "Nível 5",
+  "colors": {
+    "orange": { "color": "#f97316", "pattern": "vstripes", "label": "laranja" },
+    "teal": { "color": "#0f766e", "pattern": "checker", "label": "verde-petróleo" },
+    "violet": { "color": "#a855f7", "pattern": "checker", "label": "roxo" }
+  },
+  "tubes": [
+    { "capacity": 4, "contents": ["orange", "violet", "teal", "orange"] },
+    { "capacity": 4, "contents": ["orange", "teal", "violet", "teal"] },
+    { "capacity": 4, "contents": ["violet", "orange", "teal", "violet"] },
+    { "capacity": 4, "contents": [] },
+    { "capacity": 4, "contents": [] }
+  ]
+}

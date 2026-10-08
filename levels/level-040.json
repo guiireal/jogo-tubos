@@ -1,0 +1,41 @@
+{
+  "$schema": "../level.schema.json",
+  "id": "level-040",
+  "name": "Nível 40 · Designer Eye",
+  "colors": {
+    "brown": { "color": "#a2692f", "pattern": "wood" },
+    "pink": { "color": "#f7bcd2", "pattern": "dots" },
+    "orange": { "color": "#f5893a", "pattern": "diagonal" },
+    "lime": { "color": "#a9d92f", "pattern": "stripes" },
+    "magenta": { "color": "#ea3fe0", "pattern": "dots" },
+    "teal": { "color": "#2f8f80", "pattern": "checker" },
+    "yellow": { "color": "#ffd60a", "pattern": "vstripes" },
+    "cyan": { "color": "#62d4f4", "pattern": "grid" },
+    "purple": { "color": "#9b30c2", "pattern": "dots" }
+  },
+  "tubes": [
+    { "capacity": 7, "contents": ["teal", "yellow", "brown", "lime", "pink", "pink", "purple"] },
+    { "capacity": 7, "contents": ["yellow", "purple", "yellow", "brown", "brown", "magenta", "magenta"] },
+    { "capacity": 4, "contents": ["pink", "cyan", "brown", "pink"] },
+    { "capacity": 4, "contents": ["orange", "teal", "lime", "brown"] },
+    { "capacity": 4, "contents": ["teal", "orange", "cyan", "cyan"] },
+    { "capacity": 4, "contents": ["pink", "brown", "pink", "yellow"] },
+    { "capacity": 4, "contents": ["lime", "cyan", "purple", "magenta"] },
+    { "capacity": 4, "contents": ["teal", "orange", "pink", "lime"] },
+    { "capacity": 4, "contents": ["orange", "magenta", "purple", "brown"] },
+    { "capacity": 4, "contents": [] },
+    { "capacity": 4, "contents": [] },
+    { "capacity": 4, "contents": [] }
+  ],
+  "layout": {
+    "groups": [
+      [
+        [0, 1]
+      ],
+      [
+        [2, 3, 4, 5, 6, 7],
+        [8, 9, 10, 11]
+      ]
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "../../level.schema.json",
+  "id": "level-003",
+  "name": "Nível 3 · Torres",
+  "defaultCapacity": 5,
+  "colors": {
+    "coral": { "color": "#ff7a6b", "pattern": "diagonal" },
+    "mint":  { "color": "#5eead4", "pattern": "grid" },
+    "sky":   { "color": "#60a5fa", "pattern": "dots" },
+    "sand":  { "color": "#e9c46a", "pattern": "wood" },
+    "plum":  { "color": "#b04fc9", "pattern": "stripes" },
+    "lime":  { "color": "#a3e635", "pattern": "vstripes" }
+  },
+  "tubes": [
+    ["coral","coral","coral","coral","coral"], ["mint","mint","mint","mint","mint"], ["sky","sky","sky","sky","sky"],
+    ["sand","sand","sand","sand","sand"], ["plum","plum","plum","plum","plum"], ["lime","lime","lime","lime","lime"],
+    [], []
+  ],
+  "layout": { "groups": [ [[0, 1, 2, 3]], [[4, 5, 6, 7]] ] }
+}

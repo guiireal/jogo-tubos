@@ -1,0 +1,31 @@
+{
+  "$schema": "../level.schema.json",
+  "id": "level-016",
+  "name": "Nível 16",
+  "colors": {
+    "violet": { "color": "#a855f7", "pattern": "checker", "label": "roxo" },
+    "orange": { "color": "#f97316", "pattern": "vstripes", "label": "laranja" },
+    "green": { "color": "#22c55e", "pattern": "dots", "label": "verde" },
+    "brown": { "color": "#a2692f", "pattern": "wood", "label": "marrom" },
+    "teal": { "color": "#0f766e", "pattern": "checker", "label": "verde-petróleo" },
+    "yellow": { "color": "#facc15", "pattern": "diagonal", "label": "amarelo" }
+  },
+  "tubes": [
+    { "capacity": 4, "contents": ["violet", "yellow", "brown", "brown"] },
+    { "capacity": 3, "contents": [] },
+    { "capacity": 3, "contents": ["brown", "teal", "teal"] },
+    { "capacity": 3, "contents": ["green"] },
+    { "capacity": 4, "contents": ["brown", "violet"] },
+    { "capacity": 4, "contents": ["orange", "yellow", "teal", "orange"] },
+    { "capacity": 4, "contents": ["orange", "yellow", "violet", "green"] },
+    { "capacity": 3, "contents": ["violet", "green", "orange"] }
+  ],
+  "layout": {
+    "groups": [
+      [
+        [0, 1, 2, 3],
+        [4, 5, 6, 7]
+      ]
+    ]
+  }
+}

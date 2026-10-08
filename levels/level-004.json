@@ -1,0 +1,24 @@
+{
+  "$schema": "../level.schema.json",
+  "id": "level-004",
+  "name": "Nível 4",
+  "colors": {
+    "teal": { "color": "#0f766e", "pattern": "checker", "label": "verde-petróleo" },
+    "green": { "color": "#22c55e", "pattern": "dots", "label": "verde" },
+    "blue": { "color": "#3b82f6", "pattern": "stripes", "label": "azul" }
+  },
+  "tubes": [
+    { "capacity": 5, "contents": ["teal", "teal", "blue"] },
+    { "capacity": 4, "contents": ["teal", "blue", "blue", "green"] },
+    { "capacity": 5, "contents": ["blue", "green", "green", "green"] },
+    { "capacity": 4, "contents": ["teal", "blue"] },
+    { "capacity": 5, "contents": [] }
+  ],
+  "layout": {
+    "groups": [
+      [
+        [0, 1, 2, 3, 4]
+      ]
+    ]
+  }
+}

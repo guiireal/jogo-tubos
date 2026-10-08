@@ -1,0 +1,17 @@
+{
+  "$schema": "../../level.schema.json",
+  "id": "level-002",
+  "name": "Nível 2 · Clássico",
+  "defaultCapacity": 4,
+  "colors": {
+    "red":    { "color": "#ef4444", "pattern": "solid" },
+    "blue":   { "color": "#3b82f6", "pattern": "stripes" },
+    "green":  { "color": "#22c55e", "pattern": "dots" },
+    "yellow": { "color": "#facc15", "pattern": "diagonal" },
+    "violet": { "color": "#a855f7", "pattern": "checker" }
+  },
+  "tubes": [
+    ["red","red","red","red"], ["blue","blue","blue","blue"], ["green","green","green","green"],
+    ["yellow","yellow","yellow","yellow"], ["violet","violet","violet","violet"], [], []
+  ]
+}

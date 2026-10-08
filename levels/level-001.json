@@ -1,0 +1,14 @@
+{
+  "$schema": "../level.schema.json",
+  "id": "level-001",
+  "name": "Nível 1",
+  "colors": {
+    "violet": { "color": "#a855f7", "pattern": "checker", "label": "roxo" },
+    "green": { "color": "#22c55e", "pattern": "dots", "label": "verde" }
+  },
+  "tubes": [
+    { "capacity": 4, "contents": ["green", "green", "violet", "violet"] },
+    { "capacity": 4, "contents": ["violet", "green", "green", "violet"] },
+    { "capacity": 4, "contents": [] }
+  ]
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tubos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <header class="top">
+      <div class="tools">
+        <button class="icon-btn" id="help" type="button" aria-label="Como jogar" title="Como jogar">?</button>
+      </div>
+      <div class="counter">
+        <small>Jogadas</small>
+        <strong id="moves">0</strong>
+      </div>
+      <div class="tools">
+        <button class="icon-btn" id="retry" type="button" aria-label="Recomeçar o nível" title="Recomeçar o nível">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"
+                  d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4.5h4.5"/>
+          </svg>
+        </button>
+        <button class="icon-btn" id="undo" type="button" aria-label="Desfazer a última jogada" title="Desfazer a última jogada" disabled>
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 14 4 9l5-5M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <h1 class="title" id="level-name">Carregando…</h1>
+
+    <section class="board" id="board" aria-label="Tubos"></section>
+
+    <footer class="bar" id="bar">
+      <div class="status" id="status" aria-live="polite">Em jogo</div>
+      <button class="next" id="next" type="button" hidden>Próximo →</button>
+    </footer>
+  </main>
+
+  <dialog class="tutorial" id="tutorial" aria-labelledby="tutorial-title">
+    <div class="tutorial-inner">
+      <header>
+        <h2 id="tutorial-title"><span aria-hidden="true">🧪</span> Como jogar</h2>
+        <form method="dialog"><button class="icon-btn" aria-label="Fechar">✕</button></form>
+      </header>
+      <div class="tip">
+        <span class="tip-icon" style="--tip: #f5b400" aria-hidden="true">🎯</span>
+        <div><h3>O objetivo</h3><p>Organize as cores até cada tubo ter uma única cor.</p></div>
+      </div>
+      <div class="tip">
+        <span class="tip-icon" style="--tip: #12b5d6" aria-hidden="true">👆</span>
+        <div><h3>Como despejar</h3><p>Toque em um tubo para selecioná-lo e depois em outro para despejar.</p></div>
+      </div>
+      <div class="tip">
+        <span class="tip-icon" style="--tip: #f0303a" aria-hidden="true">⚠️</span>
+        <div><h3>As regras</h3><p>Só despeje sobre a mesma cor ou num tubo vazio. O destino precisa ter espaço.</p></div>
+      </div>
+      <div class="tip">
+        <span class="tip-icon" style="--tip: #00c24a" aria-hidden="true">↶</span>
+        <div><h3>Errou?</h3><p>↶ desfaz a última jogada e ↻ recomeça o nível.</p></div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="rules.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
