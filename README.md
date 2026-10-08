@@ -1,4 +1,4 @@
-# 🧪 Tubos
+# 🧪 Tubes
 
 Jogo de ordenar líquidos por cor, feito com **HTML, CSS e JavaScript puros**: sem framework, sem build e sem dependências. Toque em um tubo para levantá-lo, toque em outro para despejar e deixe cada tubo com uma cor só.
 
